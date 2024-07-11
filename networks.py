@@ -543,13 +543,13 @@ class UnetSkipConnectionBlock(nn.Module):
                 model = down + [submodule] + up
 
         self.model = nn.Sequential(*model)
-        self.attention = simam_module(outer_nc * 2)  # 添加SimAM注意力模块
+        #self.attention = simam_module(outer_nc * 2)  # 添加SimAM注意力模块
     def forward(self, x):
         if self.outermost:
             return self.model(x)
         else:   # add skip connections
-            #return torch.cat([x, self.model(x)], 1)
-            return torch.cat([x, self.attention(self.model(x))], 1)
+            return torch.cat([x, self.model(x)], 1)
+            #return torch.cat([x, self.attention(self.model(x))], 1)
 
 
 class NLayerDiscriminator(nn.Module):
