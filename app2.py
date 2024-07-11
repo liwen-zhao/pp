@@ -1,6 +1,6 @@
 import streamlit as st
 import torch
-from models.networks import define_G  # 确保你有定义 UnetGenerator 类或相关模型
+from networks import define_G  # 确保你有定义 UnetGenerator 类或相关模型
 from PIL import Image
 from torchvision import transforms
 
