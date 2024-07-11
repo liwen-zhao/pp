@@ -60,7 +60,7 @@ def generate_image(generator, image_path):
 
 
 # 加载 Pix2Pix 模型
-model_path = './checkpoints/facades_label2photo_pretrained/latest_net_G.pth'  # 替换为你选择的最佳生成器模型路径
+model_path = 'latest_net_G.pth'  # 替换为你选择的最佳生成器模型路径
 generator = load_pix2pix_model(model_path)
 
 # 创建Streamlit界面
