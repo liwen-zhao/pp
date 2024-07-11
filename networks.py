@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import init
 import functools
 from torch.optim import lr_scheduler
-from .attention import cbamAttention,SEAttention,GAM_Attention,simam_module
+#from .attention import cbamAttention,SEAttention,GAM_Attention,simam_module
 
 ###############################################################################
 # Helper Functions
